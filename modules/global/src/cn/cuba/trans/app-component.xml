@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<app-component xmlns="http://schemas.haulmont.com/cuba/app-component.xsd"
+               dependsOn="com.haulmont.cuba">
+
+    <module name="global" blocks="*">
+        <artifact name="transcn-global" appJar="true"/>
+
+        <property name="cuba.persistenceConfig" value="+cn/cuba/trans/persistence.xml"/>
+        <property name="cuba.metadataConfig" value="+cn/cuba/trans/metadata.xml"/>
+        <property name="cuba.viewsConfig" value="+cn/cuba/trans/views.xml"/>
+    </module>
+    <module name="core" dependsOn="global" blocks="core">
+        <artifact name="transcn-core" appJar="true"/>
+        <artifact name="transcn-core" classifier="db" ext="zip" configuration="dbscripts"/>
+
+        <property name="cuba.springContextConfig" value="+cn/cuba/trans/spring.xml"/>
+        <property name="cuba.mainMessagePack" value="+cn.cuba.trans.core"/>
+    </module>
+    <module name="web" dependsOn="gui" blocks="web">
+        <artifact name="transcn-web" appJar="true"/>
+        <artifact name="transcn-web" classifier="web" ext="zip" configuration="webcontent"/>
+
+        <property name="cuba.springContextConfig" value="+cn/cuba/trans/web-spring.xml"/>
+        <property name="cuba.dispatcherSpringContextConfig" value="+cn/cuba/trans/web-dispatcher-spring.xml"/>
+        <property name="cuba.windowConfig" value="+cn/cuba/trans/web-screens.xml"/>
+        <property name="cuba.menuConfig" value="+cn/cuba/trans/web-menu.xml"/>
+        <property name="cuba.permissionConfig" value="+cn/cuba/trans/web-permissions.xml"/>
+        <property name="cuba.mainMessagePack" value="+cn.cuba.trans.web"/>
+    </module>
+    <module name="gui" dependsOn="global" blocks="web,desktop">
+        <artifact name="transcn-gui" appJar="true"/>
+    </module>
+</app-component>
