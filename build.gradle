@@ -33,7 +33,7 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'cn.cuba.trans'
-        version = '7.0.0'
+        version = '6.10.0'
         isSnapshot = false
     }
     tomcat {
