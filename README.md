@@ -1,16 +1,16 @@
 [![license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 
-# CUBA中文翻译扩展
+# CUBA中文翻译扩展组件
 
 CUBA 平台的中文翻译（包含商业组件），以扩展组件的方式开发
 
 ## 安装
 
-**注意**: 该扩展组件的仓库已经官方链接到CUBA主仓库。
+**注意**: 该扩展组件的仓库已经托管至 CUBA 主仓库。
 
-*可以直接跳到第二步，了解如何在CUBA项目中添加该组件。*，或者 *也可以选择* 将我们的仓库添加到项目的仓库列表。
+*可以直接跳到第二步，了解如何在CUBA项目中添加该组件。* 或者 *也可以选择* 将我们的仓库添加到项目的仓库列表。
 
-1. [*可选*] 添加该 Maven 仓库 `https://dl.bintray.com/cubacn/cuba-trans-cn/` 至CUBA项目的 build.gradle 文件：
+1. [*可选*] 添加该 Maven 仓库 `https://dl.bintray.com/cubacn/cuba-trans-cn/` 至 CUBA 项目的 build.gradle 文件：
 
 ```
 buildscript {
@@ -30,7 +30,7 @@ buildscript {
 }
 ```
 
-或者，可以通过 **CUBA Studio** 来添加我们的仓库：在左侧CUBA项目，展开 `Project`，双击 `Properties`，在弹窗中，`Repositories` 部分点击 `+` 号，
+另外，也可以通过 **CUBA Studio** 来添加我们的仓库：在左侧 CUBA 项目树，展开 `Project`，双击 `Properties`，在弹窗中的 `Repositories` 部分点击 `+` 号，
 在新打开的窗口中的 `URL` 输入 `https://dl.bintray.com/cubacn/cuba-trans-cn/`，然后点击 `OK`。 最后，选中刚才添加的仓库即可。
 
 2. 选择一个能兼容项目平台版本的扩展组件版本：
