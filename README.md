@@ -42,8 +42,17 @@ buildscript {
 
 最新稳定版： `7.0.0`
 
-在项目中添加自定义应用程序组件：使用 **CUBA Studio**，在左侧CUBA项目，展开 `Project`，双击 `Properties`，在弹窗中，
+在项目中添加自定义应用程序组件：使用 **CUBA Studio**，在左侧 CUBA 项目树，展开 `Project`，双击 `Properties`，在弹窗中，
 点击 `Custom components` 部分的 `+` 号。然后粘贴需要的版本坐标即可。
+
+3. CUBA 应用程序中添加中文语言支持：
+
+使用 **CUBA Studio**，在左侧 CUBA 项目树，展开 `Project`，双击 `Properties` 在 `Available locales` 部分点击后面的小铅笔进行编辑，
+弹窗中点击 `+` 号，添加新语言。Language 填 `中文简体`，注意中文的 Code 为 `zh_CN`。如果系统语言不是中文，需要在浏览器打开 CUBA 应用程序之后通过 Help->Settings->Language 进行选择。
+
+系统语言设置与 CUBA 语言相关的注意事项请参考 CUBA 官方文档： https://doc.cuba-platform.com/manual-7.0/app_properties_reference.html#cuba.availableLocales 
+
+需要注意的是：如果语言列表中没有跟用户操作系统语言相匹配的条目，那么 cuba.availableLocales 属性定义的语言列表的第一个语言将被用来作为默认语言。否则，即会选择跟用户操作系统语言相匹配的做为默认语言。
 
 ## 支持的数据库
 
