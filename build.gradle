@@ -223,7 +223,7 @@ subprojects {
         // make files public ?
         publish = true
         // override existing artifacts?
-        override = false
+        override = true
 
         // metadata
         pkg {
