@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:gui="http://schemas.haulmont.com/cuba/spring/cuba-gui.xsd">
+       xmlns:context="http://www.springframework.org/schema/context">
 
     <!-- Annotation-based beans -->
     <context:component-scan base-package="cn.cuba.trans"/>
-    <gui:screens base-packages="cn.cuba.trans.web"/>
-
 
 </beans>
