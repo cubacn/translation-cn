@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '7.0.0'
+    ext.cubaVersion = '7.0.5'
     repositories {
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
@@ -33,7 +33,7 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'cn.cuba.trans'
-        version = '7.0.1'
+        version = '7.0.2'
         isSnapshot = false
     }
     tomcat {

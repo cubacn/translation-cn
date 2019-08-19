@@ -38,10 +38,10 @@ buildscript {
 |  平台版本  |  扩展组件版本  | 坐标
 | ---------------- | -------------- | ------------
 | 6.10.*           | 6.10.1          | cn.cuba.trans:transcn-global:6.10.1
-| 7.0.*            | 7.0.1          | cn.cuba.trans:transcn-global:7.0.1
+| 7.*              | 7.0.2          | cn.cuba.trans:transcn-global:7.0.2
 
 v6 最新稳定版： `6.10.1`
-v7 最新稳定版： `7.0.1`
+v7 最新稳定版： `7.0.2`
 
 在项目中添加自定义应用程序组件：使用 **CUBA Studio**，在左侧 CUBA 项目树，展开 `Project`，双击 `Properties`，在弹窗中，
 点击 `Custom components` 部分的 `+` 号。然后粘贴需要的版本坐标即可。
