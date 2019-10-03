@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '7.0.0'
+    ext.cubaVersion = '7.0.5'
     repositories {
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
@@ -33,7 +33,7 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'cn.cuba.trans'
-        version = '7.0.0'
+        version = '7.0.2'
         isSnapshot = false
     }
     tomcat {
@@ -45,7 +45,7 @@ dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
 }
 
-def hsql = 'org.hsqldb:hsqldb:2.2.9'
+def hsql = 'org.hsqldb:hsqldb:2.4.1'
 
 configure([globalModule, coreModule, webModule, guiModule]) {
     apply(plugin: 'java')
@@ -223,7 +223,7 @@ subprojects {
         // make files public ?
         publish = true
         // override existing artifacts?
-        override = false
+        override = true
 
         // metadata
         pkg {
