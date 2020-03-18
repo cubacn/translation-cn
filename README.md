@@ -20,7 +20,8 @@ CUBA 平台的中文翻译（包含 BPM、Charts、Report、FTS），以扩展�
 | ---------------- | -------------- | ------------
 | 6.10.*           | 6.10.2         | cn.cuba.trans:transcn-global:6.10.2
 | 7.0.*            | 7.0.2          | cn.cuba.trans:transcn-global:7.0.2
-| 7.1.*            | 7.1.0          | cn.cuba.trans:transcn-global:7.1.0
+| 7.1.*            | 7.1.1          | cn.cuba.trans:transcn-global:7.1.1
+| 7.2.*            | 7.2.0          | cn.cuba.trans:transcn-global:7.2.0
 
 4. CUBA 应用程序中添加中文语言支持：
 
