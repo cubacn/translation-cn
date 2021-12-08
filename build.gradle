@@ -1,16 +1,10 @@
 
 buildscript {
-    ext.cubaVersion = '7.2.1'
+    ext.cubaVersion = '7.2.10'
     repositories {
         maven {
-            url 'https://dl.bintray.com/cuba-platform/main'
+            url 'https://nexus.cuba-platform.cn/repository/cuba/'
         }
-        mavenCentral()
-        jcenter()
-        maven {
-            url 'http://maven.vaadin.com/vaadin-addons'
-        }
-        
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
@@ -33,11 +27,17 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'cn.cuba.trans'
-        version = '7.2.0'
+        version = '7.2.1'
         isSnapshot = false
     }
     tomcat {
         dir = "$project.rootDir/deploy/tomcat"
+    }
+
+    uploadRepository {
+        url = 'https://repo.cuba-platform.com/content/repositories/public-addons/'
+        user = project.hasProperty('cubaRepoUser') ? project.property('cubaRepoUser') : System.getenv('CUBA_REPO_USER')
+        password = project.hasProperty('cubaRepoPassword') ? project.property('cubaRepoPassword') : System.getenv('CUBA_REPO_PASSWORD')
     }
 }
 
