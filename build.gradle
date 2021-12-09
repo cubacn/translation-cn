@@ -8,8 +8,6 @@ buildscript {
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
-        // Bintray upload plugin
-        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0"
     }
 }
 
@@ -196,41 +194,4 @@ task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefi
     }
 }
 restart.finalizedBy start
-
-subprojects {
-    apply plugin: 'com.jfrog.bintray'
-
-    bintray {
-        user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
-        key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
-
-        configurations = ['archives']
-
-        // make files public ?
-        publish = true
-        // override existing artifacts?
-        override = true
-
-        // metadata
-        pkg {
-            repo = 'cuba-trans-cn'           // your repository name
-            name = 'translation-cn'  // package name - it will be created upon upload
-            desc = 'CUBA CN translation add-on'  // optional package description
-
-            // organization name, if your repository is created inside an organization.
-            // remove this parameter if you don't have an organization
-//            userOrg = 'jupiter-org'
-
-            websiteUrl = 'https://github.com/cubacn/translation-cn'
-            issueTrackerUrl = 'https://github.com/cubacn/translation-cn/issues'
-            vcsUrl = 'git@github.com:cubacn/translation-cn.git' // mandatory for Open Source projects
-
-            licenses = ["Apache-2.0"]
-            labels = ['cuba', 'cuba-platform', 'opensource', 'translation', 'localization', 'Chinese']
-
-            githubRepo = 'cubacn/translation-cn' // optional Github repository
-            githubReleaseNotesFile = 'README.md' // optional Github readme file
-        }
-    }
-}
 
