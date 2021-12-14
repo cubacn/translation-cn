@@ -5,9 +5,11 @@
 CUBA 平台的中文翻译（包含 BProc/BPM、Charts、Report、FTS），以扩展组件的方式开发
 
 ## 更新
+* 7.2.2
+	* 修复 Windows 上 BProc 的中文显示问题。
 * 7.2.1
-	* 增加 BProc 的中文支持。
-	* 修复 Github 上之前遗留的问题。
+    * 增加 BProc 的中文支持。
+    * 修复 Github 上之前遗留的问题。
 
 ## 安装
 

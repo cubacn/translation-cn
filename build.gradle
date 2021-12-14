@@ -25,7 +25,7 @@ apply(plugin: 'cuba')
 cuba {
     artifact {
         group = 'cn.cuba.trans'
-        version = '7.2.1'
+        version = '7.2.2'
         isSnapshot = false
     }
     tomcat {
